@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sanjana choudhary</title>
+  <title>Sanjana Choudhary</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link
@@ -12,7 +12,29 @@
 </head>
 
 <body>
-  <div class="top-container">
+
+
+  <nav>
+    <div class="logo">
+        <h1 class="name">Portfolio</h1>
+    </div>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#Intro">Home</a></li>
+        <li><a href="#Me">Me</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+</nav>
+  
+
+
+
+  <div class="top-container" id="Intro">
     <img class="top-cloud" src="images/cloud.png" alt="cloud-image">
     <h1>I'm Sanjana.</h1>
     <p class="a-webdesigner">a web-developer.</p>
@@ -21,14 +43,14 @@
   </div>
 
 
-  <div class="middle-container">
+  <div class="middle-container" id="Me">
     <div class="profile">
       <img class="profile-img"src="images/circle-cropped.png" alt="profile-image">
       <h2>Hello.</h2>
-      <p class="intro">I'm a web developer and love to create beautiful websites.I have complete knowledge of HTML and CSS with some spicy mix up of javascript.</p>
+      <p class="intro">Hello I am Sanjana Choudhary and I'm a web developer and love to create beautiful websites.I have complete knowledge of HTML and CSS with some spicy mix up of javascript.</p>
     </div>
     <hr>
-    <div class="skills">
+    <div class="skills" id="skill">
       <h2>My Skills.</h2>
       <div class="skill-row">
         <img class="work-img1" src="images/Website-Design-Development-1.png" alt="work-image">
@@ -53,13 +75,30 @@
   </div>
 
 
-  <div class="bottom-container">
+  <div class="bottom-container" id="contact">
     <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
     <a class="footer-link" href="https://twitter.com/">Twitter</a>
     <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
-    <p class="copyright">© 2018 Sanjana Choudhary</p>
+    <p class="copyright">© 2020 Sanjana Choudhary</p>
   </div>
+<script>
 
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+
+</script>
 </body>
 
 </html>
